@@ -1,12 +1,12 @@
 {
-  "name": "@gcc2/core-darwin-universal",
+  "name": "mmpm-darwin-universal",
   "version": "0.0.0",
   "os": [
     "darwin"
   ],
-  "main": "gcc2.darwin-universal.node",
+  "main": "mmpm.darwin-universal.node",
   "files": [
-    "gcc2.darwin-universal.node"
+    "mmpm.darwin-universal.node"
   ],
   "license": "MIT",
   "engines": {

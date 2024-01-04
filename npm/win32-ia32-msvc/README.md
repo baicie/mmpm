@@ -1,3 +1,3 @@
-# `@gcc2/core-win32-ia32-msvc`
+# `mmpm-win32-ia32-msvc`
 
-This is the **i686-pc-windows-msvc** binary for `@gcc2/core`
+This is the **i686-pc-windows-msvc** binary for `mmpm`

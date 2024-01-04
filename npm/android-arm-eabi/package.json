@@ -1,5 +1,5 @@
 {
-  "name": "@gcc2/core-android-arm-eabi",
+  "name": "mmpm-android-arm-eabi",
   "version": "0.0.0",
   "os": [
     "android"
@@ -7,9 +7,9 @@
   "cpu": [
     "arm"
   ],
-  "main": "gcc2.android-arm-eabi.node",
+  "main": "mmpm.android-arm-eabi.node",
   "files": [
-    "gcc2.android-arm-eabi.node"
+    "mmpm.android-arm-eabi.node"
   ],
   "license": "MIT",
   "engines": {

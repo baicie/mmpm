@@ -1,11 +1,10 @@
 {
   "name": "mmpm",
-  "private": "true",
   "version": "0.0.0",
   "main": "index.js",
   "types": "index.d.ts",
   "napi": {
-    "name": "gcc2",
+    "name": "mmpm",
     "triples": {
       "additional": [
         "aarch64-apple-darwin",
@@ -18,15 +17,17 @@
         "x86_64-unknown-freebsd",
         "i686-pc-windows-msvc",
         "armv7-linux-androideabi",
-        "universal-apple-darwin"
+        "universal-apple-darwin",
+        "riscv64gc-unknown-linux-gnu"
       ]
     }
   },
   "license": "MIT",
   "devDependencies": {
     "@baicie/commitizen": "^0.1.0",
-    "@napi-rs/cli": "^2.16.3",
-    "ava": "^5.1.1"
+    "@napi-rs/cli": "^3.0.0-alpha.30",
+    "ava": "^5.1.1",
+    "tsup": "^8.0.1"
   },
   "ava": {
     "timeout": "3m"
@@ -36,12 +37,13 @@
   },
   "scripts": {
     "artifacts": "napi artifacts",
-    "build": "napi build --platform --release",
-    "build:debug": "napi build --platform",
+    "build": "tsc -d && napi build --manifest-path bindings/Cargo.toml --platform -p binding_core_node --js ./node-swc/src/binding.js --dts ./node-swc/src/binding.d.ts --release -o .",
+    "build-dev": "tsc -d && napi build --manifest-path bindings/Cargo.toml --platform -p binding_core_node --js ./node-swc/src/binding.js --dts ./node-swc/src/binding.d.ts -o .",
     "prepublishOnly": "napi prepublish -t npm",
     "test": "ava",
     "universal": "napi universal",
     "version": "napi version",
     "cz": "bcz"
-  }
+  },
+  "packageManager": "pnpm@8.14.0"
 }

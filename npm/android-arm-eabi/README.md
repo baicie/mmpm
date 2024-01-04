@@ -1,3 +1,3 @@
-# `@gcc2/core-android-arm-eabi`
+# `mmpm-android-arm-eabi`
 
-This is the **armv7-linux-androideabi** binary for `@gcc2/core`
+This is the **armv7-linux-androideabi** binary for `mmpm`

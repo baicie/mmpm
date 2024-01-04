@@ -1,3 +1,3 @@
-# `@gcc2/core-darwin-universal`
+# `mmpm-darwin-universal`
 
-This is the **universal-apple-darwin** binary for `@gcc2/core`
+This is the **universal-apple-darwin** binary for `mmpm`
