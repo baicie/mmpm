@@ -1,10 +1,8 @@
 [workspace]
-
 members = [
-
+    "mmpm_cli",
 ]
 
-resolver = "2"
 [profile.release]
 # lto = true
 
@@ -14,13 +12,9 @@ resolver = "2"
 # debug = true
 # opt-level = 'z'
 
-[profile.bench]
-debug = true
-# lto = true
+# Strip debug symbols
+strip = "symbols"
 
-# Optimize for iteration
-[profile.dev.build-override]
-opt-level = 3
 
 [profile.dev.package."*"]
-opt-level = 3
+debug-assertions = false

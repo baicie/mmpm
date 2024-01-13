@@ -7,18 +7,16 @@
     "name": "mmpm",
     "triples": {
       "additional": [
-        "aarch64-apple-darwin",
-        "aarch64-linux-android",
-        "aarch64-unknown-linux-gnu",
-        "aarch64-unknown-linux-musl",
-        "aarch64-pc-windows-msvc",
-        "armv7-unknown-linux-gnueabihf",
+        "x86_64-apple-darwin",
+        "x86_64-pc-windows-msvc",
+        "x86_64-unknown-linux-gnu",
         "x86_64-unknown-linux-musl",
-        "x86_64-unknown-freebsd",
         "i686-pc-windows-msvc",
-        "armv7-linux-androideabi",
-        "universal-apple-darwin",
-        "riscv64gc-unknown-linux-gnu"
+        "armv7-unknown-linux-gnueabihf",
+        "aarch64-unknown-linux-gnu",
+        "aarch64-apple-darwin",
+        "aarch64-unknown-linux-musl",
+        "aarch64-pc-windows-msvc"
       ]
     }
   },
@@ -27,7 +25,9 @@
     "@baicie/commitizen": "^0.1.0",
     "@napi-rs/cli": "^3.0.0-alpha.30",
     "ava": "^5.1.1",
-    "tsup": "^8.0.1"
+    "tsup": "^8.0.1",
+    "tsx": "^4.7.0",
+    "turbo": "^1.11.3"
   },
   "ava": {
     "timeout": "3m"
@@ -38,12 +38,13 @@
   "scripts": {
     "artifacts": "napi artifacts",
     "build": "tsc -d && napi build --manifest-path bindings/Cargo.toml --platform -p binding_core_node --js ./node-swc/src/binding.js --dts ./node-swc/src/binding.d.ts --release -o .",
-    "build-dev": "tsc -d && napi build --manifest-path bindings/Cargo.toml --platform -p binding_core_node --js ./node-swc/src/binding.js --dts ./node-swc/src/binding.d.ts -o .",
+    "build-dev": "napi build --platform -p binding_core_node --js ./packages/core/src/binding.js --dts ./node-swc/src/binding.d.ts -o .",
     "prepublishOnly": "napi prepublish -t npm",
     "test": "ava",
     "universal": "napi universal",
     "version": "napi version",
-    "cz": "bcz"
+    "cz": "bcz",
+    "tsx": "tsx ./index.ts"
   },
   "packageManager": "pnpm@8.14.0"
 }
