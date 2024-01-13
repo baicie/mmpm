@@ -1,5 +1,5 @@
 {
-  "name": "@gcc2/core-freebsd-x64",
+  "name": "@mmpm/freebsd-x64",
   "version": "0.0.0",
   "os": [
     "freebsd"
@@ -7,9 +7,9 @@
   "cpu": [
     "x64"
   ],
-  "main": "gcc2.freebsd-x64.node",
+  "main": "mmpm.freebsd-x64.node",
   "files": [
-    "gcc2.freebsd-x64.node"
+    "mmpm.freebsd-x64.node"
   ],
   "license": "MIT",
   "engines": {

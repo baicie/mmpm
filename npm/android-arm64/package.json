@@ -1,5 +1,5 @@
 {
-  "name": "@gcc2/core-android-arm64",
+  "name": "@mmpm/android-arm64",
   "version": "0.0.0",
   "os": [
     "android"
@@ -7,9 +7,9 @@
   "cpu": [
     "arm64"
   ],
-  "main": "gcc2.android-arm64.node",
+  "main": "mmpm.android-arm64.node",
   "files": [
-    "gcc2.android-arm64.node"
+    "mmpm.android-arm64.node"
   ],
   "license": "MIT",
   "engines": {

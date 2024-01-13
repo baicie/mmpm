@@ -1,15 +1,15 @@
 {
-  "name": "@mmpm/linux-x64-gnu",
+  "name": "@mmpm/linux-riscv64-gnu",
   "version": "0.0.0",
   "os": [
     "linux"
   ],
   "cpu": [
-    "x64"
+    "riscv64"
   ],
-  "main": "mmpm.linux-x64-gnu.node",
+  "main": "mmpm.linux-riscv64-gnu.node",
   "files": [
-    "mmpm.linux-x64-gnu.node"
+    "mmpm.linux-riscv64-gnu.node"
   ],
   "license": "MIT",
   "engines": {
